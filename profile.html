@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="CRM y Base de Datos - JIREH C.A.">
+        <meta name="author" content="JIREH C.A.">
+
+        <title>Cognitive AutoSell AI - CRM Database</title>
+
+        <!-- CSS FILES -->      
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700&display=swap" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+        <link href="css/tooplate-mini-finance.css" rel="stylesheet">
+    </head>
+    
+    <body>
+        <header class="navbar sticky-top flex-md-nowrap">
+            <div class="col-md-3 col-lg-3 me-0 px-3 fs-6">
+                <a class="navbar-brand" href="index.html">
+                    <i class="bi-robot"></i>
+                    Cognitive AI
+                </a>
+            </div>
+
+            <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <form class="custom-form header-form ms-lg-3 ms-md-3 me-lg-auto me-md-auto order-2 order-lg-0 order-md-0" action="#" method="get" role="form">
+                <input class="form-control" name="search" type="text" placeholder="Buscar Cliente en CRM..." aria-label="Search">
+            </form>
+
+            <div class="navbar-nav me-lg-2">
+                <div class="nav-item text-nowrap d-flex align-items-center">
+                    <div class="dropdown ps-3">
+                        <a class="nav-link dropdown-toggle text-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi-bell"></i>
+                            <span class="position-absolute start-100 translate-middle p-1 bg-success border border-light rounded-circle">
+                                <span class="visually-hidden">Alertas</span>
+                            </span>
+                        </a>
+                        <ul class="dropdown-menu notifications-block-wrap bg-white shadow">
+                            <small>Sincronización CRM</small>
+                            <li class="notifications-block border-bottom pb-2 mb-2">
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="notifications-icon-wrap bg-success">
+                                        <i class="notifications-icon bi-cloud-check"></i>
+                                    </div>
+                                    <div>
+                                        <span>Backup de Clientes completado.</span>
+                                        <p>Hace 1 hora</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown px-3">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="images/medium-shot-happy-man-smiling.jpg" class="profile-image img-fluid" alt="">
+                        </a>
+                        <ul class="dropdown-menu bg-white shadow">
+                            <li>
+                                <div class="dropdown-menu-profile-thumb d-flex">
+                                    <img src="images/medium-shot-happy-man-smiling.jpg" class="profile-image img-fluid me-3" alt="">
+                                    <div class="d-flex flex-column">
+                                        <small>Moisés Bove</small>
+                                        <a href="#">ceo@jireh.com</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a class="dropdown-item" href="profile.html"><i class="bi-person me-2"></i> Mi Perfil</a></li>
+                            <li><a class="dropdown-item" href="setting.html"><i class="bi-gear me-2"></i> Configuración</a></li>
+                            <li><a class="dropdown-item" href="help-center.html"><i class="bi-question-circle me-2"></i> Ayuda</a></li>
+                            <li class="border-top mt-3 pt-2 mx-4"><a class="dropdown-item ms-0 me-0" href="#"><i class="bi-box-arrow-left me-2"></i> Salir</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container-fluid">
+            <div class="row">
+                <!-- BARRA LATERAL RESTAURADA -->
+                <nav id="sidebarMenu" class="col-md-3 col-lg-3 d-md-block sidebar collapse">
+                    <div class="position-sticky py-4 px-3 sidebar-sticky">
+                        <ul class="nav flex-column h-100">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">
+                                    <i class="bi-house-fill me-2"></i>
+                                    Panel Principal
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="wallet.html">
+                                    <i class="bi-cpu me-2"></i>
+                                    Bots Activos
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <!-- PÁGINA ACTIVA -->
+                                <a class="nav-link active" href="profile.html">
+                                    <i class="bi-people me-2"></i>
+                                    Base de Datos CRM
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="setting.html">
+                                    <i class="bi-gear me-2"></i>
+                                    Configuración Sistema
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="help-center.html">
+                                    <i class="bi-question-circle me-2"></i>
+                                    Soporte JIREH
+                                </a>
+                            </li>
+
+                            <li class="nav-item featured-box mt-lg-5 mt-4 mb-4">
+                                <img src="images/credit-card.png" class="img-fluid" alt="">
+                                <a class="btn custom-btn" href="#">Renovar Licencia</a>
+                            </li>
+
+                            <li class="nav-item border-top mt-auto pt-2">
+                                <a class="nav-link" href="#">
+                                    <i class="bi-box-arrow-left me-2"></i>
+                                    Cerrar Sesión
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <main class="main-wrapper col-md-9 ms-sm-auto py-4 col-lg-9 px-md-4 border-start">
+                    <div class="title-group mb-3">
+                        <h1 class="h2 mb-0">Base de Datos CRM</h1>
+                        <small class="text-muted">Gestión de Clientes y Acceso Administrativo</small>
+                    </div>
+
+                    <div class="row my-4">
+                        <div class="col-lg-7 col-12">
+                            <!-- TARJETA DE PERFIL ADMINISTRADOR -->
+                            <div class="custom-block custom-block-profile">
+                                <div class="row">
+                                    <div class="col-lg-12 col-12 mb-3">
+                                        <h6>Administrador del Sistema</h6>
+                                    </div>
+
+                                    <div class="col-lg-3 col-12 mb-4 mb-lg-0">
+                                        <div class="custom-block-profile-image-wrap">
+                                            <!-- Mantenemos la imagen por ahora, pero el contexto cambia -->
+                                            <img src="images/medium-shot-happy-man-smiling.jpg" class="custom-block-profile-image img-fluid" alt="">
+                                            <a href="setting.html" class="bi-shield-lock-fill custom-block-edit-icon" title="Permisos de Seguridad"></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-9 col-12">
+                                        <p class="d-flex flex-wrap mb-2">
+                                            <strong>Nombre:</strong>
+                                            <span>Moisés Bove León</span>
+                                        </p>
+
+                                        <p class="d-flex flex-wrap mb-2">
+                                            <strong>Email:</strong>
+                                            <a href="#">ceo@jireh.com</a>
+                                        </p>
+
+                                        <p class="d-flex flex-wrap mb-2">
+                                            <strong>Cargo:</strong>
+                                            <span>CEO & Director de Tecnología</span>
+                                        </p>
+
+                                        <p class="d-flex flex-wrap mb-2">
+                                            <strong>Nivel de Acceso:</strong>
+                                            <span class="badge bg-success">Super Admin (Root)</span>
+                                        </p>
+
+                                        <p class="d-flex flex-wrap">
+                                            <strong>Ubicación:</strong>
+                                            <span>Lara, Venezuela (HQ)</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- INFORMACIÓN DEL SERVIDOR DE DATOS (Antes era Tarjeta de Crédito) -->
+                            <div class="custom-block custom-block-profile bg-white">
+                                <h6 class="mb-4">Capacidad del Servidor de Datos</h6>
+
+                                <p class="d-flex flex-wrap mb-2">
+                                    <strong>ID del Cluster:</strong>
+                                    <span>DB-JIREH-X99</span>
+                                </p>
+
+                                <p class="d-flex flex-wrap mb-2">
+                                    <strong>Tipo de Base de Datos:</strong>
+                                    <span>MongoDB Enterprise</span>
+                                </p>
+
+                                <p class="d-flex flex-wrap mb-2">
+                                    <strong>Registros Totales:</strong>
+                                    <span>1,540,200 Clientes</span>
+                                </p>
+
+                                <p class="d-flex flex-wrap mb-2">
+                                    <strong>Próximo Backup:</strong>
+                                    <span>Automático (Cada 24h)</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5 col-12">
+                            <!-- TARJETA DE SOPORTE -->
+                            <div class="custom-block custom-block-contact">
+                                <h6 class="mb-4">¿Necesitas extraer data manual?</h6>
+
+                                <p>
+                                    <strong>Línea Directa IT:</strong>
+                                    <a href="#" class="ms-2">
+                                        +58 (426) 035-8214
+                                    </a>
+                                </p>
+
+                                <a href="help-center.html" class="btn custom-btn custom-btn-bg-white mt-3">
+                                    Abrir Ticket de Soporte
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- NUEVA SECCIÓN: TABLA RÁPIDA DE CLIENTES (CRM) -->
+                         <div class="col-lg-12 col-12 mt-4">
+                            <div class="custom-block bg-white">
+                                <h5 class="mb-4">Últimos Clientes Gestionados (Live CRM)</h5>
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Cliente</th>
+                                                <th>Estado</th>
+                                                <th>Bot Asignado</th>
+                                                <th>Valor del Lead</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Farmatodo (Sede Principal)</td>
+                                                <td><span class="badge bg-success">Cierre Exitoso</span></td>
+                                                <td>Bot Ventas #1</td>
+                                                <td>$5,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tiendas Traki</td>
+                                                <td><span class="badge bg-warning text-dark">En Negociación</span></td>
+                                                <td>Bot CRM #4</td>
+                                                <td>$12,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Banco de Venezuela</td>
+                                                <td><span class="badge bg-primary">Lead Calificado</span></td>
+                                                <td>Bot Financiero</td>
+                                                <td>$50,000</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                         </div>
+
+                    </div>
+
+                    <footer class="site-footer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 col-12">
+                                    <p class="copyright-text">Copyright © 2026 JIREH C.A.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </main>
+
+            </div>
+        </div>
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/custom.js"></script>
+
+    </body>
+</html>

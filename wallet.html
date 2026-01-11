@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="Gestión de Bots Activos - JIREH C.A.">
+        <meta name="author" content="JIREH C.A.">
+
+        <title>Cognitive AutoSell AI - Bots Activos</title>
+
+        <!-- CSS FILES -->      
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700&display=swap" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+        <link href="css/apexcharts.css" rel="stylesheet">
+        <link href="css/tooplate-mini-finance.css" rel="stylesheet">
+    </head>
+    
+    <body>
+        <header class="navbar sticky-top flex-md-nowrap">
+            <div class="col-md-3 col-lg-3 me-0 px-3 fs-6">
+                <a class="navbar-brand" href="index.html">
+                    <i class="bi-robot"></i>
+                    Cognitive AI
+                </a>
+            </div>
+
+            <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <form class="custom-form header-form ms-lg-3 ms-md-3 me-lg-auto me-md-auto order-2 order-lg-0 order-md-0" action="#" method="get" role="form">
+                <input class="form-control" name="search" type="text" placeholder="Buscar ID de Bot..." aria-label="Search">
+            </form>
+
+            <div class="navbar-nav me-lg-2">
+                <div class="nav-item text-nowrap d-flex align-items-center">
+                    <div class="dropdown ps-3">
+                        <a class="nav-link dropdown-toggle text-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi-bell"></i>
+                            <span class="position-absolute start-100 translate-middle p-1 bg-success border border-light rounded-circle">
+                                <span class="visually-hidden">Alertas</span>
+                            </span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-lg-end notifications-block-wrap bg-white shadow">
+                            <small>Estado del Sistema</small>
+                            <li class="notifications-block border-bottom pb-2 mb-2">
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="notifications-icon-wrap bg-success">
+                                        <i class="notifications-icon bi-check-circle-fill"></i>
+                                    </div>
+                                    <div>
+                                        <span>Servidor de Teléfonos Virtuales: Online.</span>
+                                        <p>Hace 1 min</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown px-3">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="images/medium-shot-happy-man-smiling.jpg" class="profile-image img-fluid" alt="">
+                        </a>
+                        <ul class="dropdown-menu bg-white shadow">
+                            <li>
+                                <div class="dropdown-menu-profile-thumb d-flex">
+                                    <img src="images/medium-shot-happy-man-smiling.jpg" class="profile-image img-fluid me-3" alt="">
+                                    <div class="d-flex flex-column">
+                                        <small>Moisés Bove</small>
+                                        <a href="#">ceo@jireh.com</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a class="dropdown-item" href="profile.html"><i class="bi-person me-2"></i> Mi Perfil</a></li>
+                            <li><a class="dropdown-item" href="setting.html"><i class="bi-gear me-2"></i> Configuración</a></li>
+                            <li><a class="dropdown-item" href="help-center.html"><i class="bi-question-circle me-2"></i> Ayuda</a></li>
+                            <li class="border-top mt-3 pt-2 mx-4"><a class="dropdown-item ms-0 me-0" href="#"><i class="bi-box-arrow-left me-2"></i> Salir</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container-fluid">
+            <div class="row">
+                <!-- BARRA LATERAL (Idéntica a la anterior para mantener navegación) -->
+                <nav id="sidebarMenu" class="col-md-3 col-lg-3 d-md-block sidebar collapse">
+                    <div class="position-sticky py-4 px-3 sidebar-sticky">
+                        <ul class="nav flex-column h-100">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">
+                                    <i class="bi-house-fill me-2"></i>
+                                    Panel Principal
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <!-- ESTA ES LA PÁGINA ACTIVA -->
+                                <a class="nav-link active" href="wallet.html">
+                                    <i class="bi-cpu me-2"></i>
+                                    Bots Activos
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="profile.html">
+                                    <i class="bi-people me-2"></i>
+                                    Base de Datos CRM
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="setting.html">
+                                    <i class="bi-gear me-2"></i>
+                                    Configuración Sistema
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="help-center.html">
+                                    <i class="bi-question-circle me-2"></i>
+                                    Soporte JIREH
+                                </a>
+                            </li>
+
+                            <li class="nav-item featured-box mt-lg-5 mt-4 mb-4">
+                                <img src="images/credit-card.png" class="img-fluid" alt="">
+                                <a class="btn custom-btn" href="#">Renovar Licencia</a>
+                            </li>
+
+                            <li class="nav-item border-top mt-auto pt-2">
+                                <a class="nav-link" href="#">
+                                    <i class="bi-box-arrow-left me-2"></i>
+                                    Cerrar Sesión
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <main class="main-wrapper col-md-9 ms-sm-auto py-4 col-lg-9 px-md-4 border-start">
+                    <div class="title-group mb-3">
+                        <h1 class="h2 mb-0">Gestión de Flota de Bots</h1>
+                        <small class="text-muted">Monitoreo en tiempo real de servicios activos</small>
+                    </div>
+
+                    <div class="row my-4">
+                        <div class="col-lg-12 col-12">
+                            <div class="custom-block bg-white">
+                                <h5 class="mb-4">Estado de los Servicios de IA</h5>
+
+                                <div class="table-responsive">
+                                    <table class="account-table table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">ID Bot</th>
+                                                <th scope="col">Última Actividad</th>
+                                                <th scope="col">Nombre del Servicio</th>
+                                                <th scope="col">Plataforma</th>
+                                                <th scope="col">Rendimiento</th>
+                                                <th scope="col">Costo Op.</th>
+                                                <th scope="col">Estado</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <!-- BOT 1: FACEBOOK RESPUESTAS -->
+                                            <tr>
+                                                <td scope="row">BOT-001-FB</td>
+                                                <td scope="row">Hace 2 seg</td>
+                                                <td scope="row"><strong>Auto-Respuesta Cognitiva</strong></td>
+                                                <td scope="row">Meta/Facebook</td>
+                                                <td class="text-success" scope="row">
+                                                    <span class="me-1">↑</span>
+                                                    99.8%
+                                                </td>
+                                                <td scope="row">$25.00/m</td>
+                                                <td scope="row">
+                                                    <span class="badge text-bg-success">ONLINE</span>
+                                                </td>
+                                            </tr>
+
+                                            <!-- BOT 2: ADS VENTAS -->
+                                            <tr>
+                                                <td scope="row">ADS-AI-X2</td>
+                                                <td scope="row">Hace 5 min</td>
+                                                <td scope="row"><strong>ADS Ventas Cognitivas</strong></td>
+                                                <td scope="row">Google/Meta Ads</td>
+                                                <td class="text-success" scope="row">
+                                                    <span class="me-1">↑</span>
+                                                    350% ROAS
+                                                </td>
+                                                <td scope="row">$150.00/m</td>
+                                                <td scope="row">
+                                                    <span class="badge text-bg-success">ONLINE</span>
+                                                </td>
+                                            </tr>
+
+                                            <!-- BOT 3: TELÉFONOS VIRTUALES -->
+                                            <tr>
+                                                <td scope="row">V-PHONE-G</td>
+                                                <td scope="row">Hace 1 hora</td>
+                                                <td scope="row"><strong>Generador Teléfonos Virtuales</strong></td>
+                                                <td scope="row">VoIP Global</td>
+                                                <td class="text-primary" scope="row">
+                                                    <span class="me-2">+</span>50 Números
+                                                </td>
+                                                <td scope="row">$5.00/u</td>
+                                                <td scope="row">
+                                                    <span class="badge text-bg-primary">ASIGNANDO</span>
+                                                </td>
+                                            </tr>
+
+                                            <!-- BOT 4: CRM INTEGRATOR (Inventado) -->
+                                            <tr>
+                                                <td scope="row">CRM-SYNC-04</td>
+                                                <td scope="row">Ahora</td>
+                                                <td scope="row"><strong>Sincronización de Leads</strong></td>
+                                                <td scope="row">HubSpot API</td>
+                                                <td class="text-success" scope="row">
+                                                    <span class="me-2">✓</span>100% Sync
+                                                </td>
+                                                <td scope="row">$45.00/m</td>
+                                                <td scope="row">
+                                                    <span class="badge text-bg-success">ONLINE</span>
+                                                </td>
+                                            </tr>
+
+                                            <!-- BOT 5: SENTIMENT ANALYZER (Inventado) -->
+                                            <tr>
+                                                <td scope="row">SENTI-AI-V3</td>
+                                                <td scope="row">Hace 30 min</td>
+                                                <td scope="row"><strong>Analizador de Sentimientos</strong></td>
+                                                <td scope="row">Neural Net</td>
+                                                <td class="text-warning" scope="row">
+                                                    <span class="me-2">⚠</span>Entrenando
+                                                </td>
+                                                <td scope="row">$80.00/m</td>
+                                                <td scope="row">
+                                                    <span class="badge text-bg-warning">LEARNING</span>
+                                                </td>
+                                            </tr>
+
+                                            <!-- BOT 6: VOICE ASSISTANT (Inventado) -->
+                                            <tr>
+                                                <td scope="row">VOICE-BOT-09</td>
+                                                <td scope="row">Ayer</td>
+                                                <td scope="row"><strong>Asistente de Voz Humanoide</strong></td>
+                                                <td scope="row">Asterisk/Twilio</td>
+                                                <td class="text-danger" scope="row">
+                                                    <span class="me-2">OFF</span>Mant.
+                                                </td>
+                                                <td scope="row">$200.00/m</td>
+                                                <td scope="row">
+                                                    <span class="badge text-bg-danger">OFFLINE</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- PAGINACIÓN -->
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination justify-content-center mb-0">
+                                        <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
+                        <!-- PANEL INFERIOR: RECURSOS -->
+                        <div class="col-lg-7 col-12">
+                            <div class="custom-block custom-block-balance">
+                                <small>Consumo de Recursos (Server Load)</small>
+
+                                <h2 class="mt-2 mb-3">45% CPU / 12GB RAM</h2>
+
+                                <div class="custom-block-numbers d-flex align-items-center">
+                                    <span>AWS</span>
+                                    <span>CLOUD</span>
+                                    <span>JIREH</span>
+                                    <p>S-01</p>
+                                </div>
+
+                                <div class="d-flex">
+                                    <div>
+                                        <small>Próximo Mantenimiento</small>
+                                        <p>Domingo 03:00 AM</p>
+                                    </div>
+
+                                    <div class="ms-auto">
+                                        <small>Admin</small>
+                                        <p>Moisés Bove</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- BOTONES DE CONTROL DE BOTS -->
+                            <div class="custom-block custom-block-bottom d-flex flex-wrap">
+                                <div class="custom-block-bottom-item">
+                                    <a href="#" class="d-flex flex-column">
+                                        <i class="custom-block-icon bi-plus-circle"></i>
+                                        <small>Deploy Bot</small> <!-- Desplegar nuevo bot -->
+                                    </a>
+                                </div>
+
+                                <div class="custom-block-bottom-item">
+                                    <a href="#" class="d-flex flex-column">
+                                        <i class="custom-block-icon bi-arrow-repeat"></i>
+                                        <small>Reiniciar</small>
+                                    </a>
+                                </div>
+
+                                <div class="custom-block-bottom-item">
+                                    <a href="#" class="d-flex flex-column">
+                                        <i class="custom-block-icon bi-terminal"></i>
+                                        <small>Consola</small>
+                                    </a>
+                                </div>
+
+                                <div class="custom-block-bottom-item">
+                                    <a href="#" class="d-flex flex-column">
+                                        <i class="custom-block-icon bi-pause-circle"></i>
+                                        <small>Pausar</small>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- LOGS DE ACTIVIDAD RECIENTE -->
+                        <div class="col-lg-5 col-12">
+                            <div class="custom-block custom-block-transations">
+                                <h5 class="mb-4">Bitácora de Eventos (Logs)</h5>
+
+                                <div class="d-flex flex-wrap align-items-center mb-4">
+                                    <div class="d-flex align-items-center">
+                                        <!-- Foto cambiada por icono si prefieres, o dejar foto como "Avatar del Bot" -->
+                                        <img src="images/profile/young-beautiful-woman-pink-warm-sweater.jpg" class="profile-image img-fluid" alt="">
+                                        <div>
+                                            <p><a href="#">Bot Ventas #2</a></p>
+                                            <small class="text-muted">Cliente Atendido: Carlos P.</small>
+                                        </div>
+                                    </div>
+                                    <div class="ms-auto">
+                                        <small>10:45 AM</small>
+                                        <strong class="d-block text-success">Cerrado</strong>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap align-items-center mb-4">
+                                    <div class="d-flex align-items-center">
+                                        <img src="images/profile/senior-man-white-sweater-eyeglasses.jpg" class="profile-image img-fluid" alt="">
+                                        <div>
+                                            <p><a href="#">Sistema de Alerta</a></p>
+                                            <small class="text-muted">Intento de acceso bloqueado</small>
+                                        </div>
+                                    </div>
+                                    <div class="ms-auto">
+                                        <small>10:42 AM</small>
+                                        <strong class="d-block text-danger">Bloqueado</strong>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap align-items-center">
+                                    <div class="d-flex align-items-center">
+                                        <img src="images/profile/young-woman-with-round-glasses-yellow-sweater.jpg" class="profile-image img-fluid" alt="">
+                                        <div>
+                                            <p><a href="#">Generador Números</a></p>
+                                            <small class="text-muted">Nuevo +1 (Miami) creado</small>
+                                        </div>
+                                    </div>
+                                    <div class="ms-auto">
+                                        <small>09:15 AM</small>
+                                        <strong class="d-block text-success">Asignado</strong>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <footer class="site-footer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 col-12">
+                                    <p class="copyright-text">Copyright © 2026 JIREH C.A.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </main>
+
+            </div>
+        </div>
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/apexcharts.min.js"></script>
+        <script src="js/custom.js"></script>
+    </body>
+</html>
